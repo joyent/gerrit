@@ -417,7 +417,6 @@ public class Gerrit implements EntryPoint {
 
   private void setXsrfToken() {
     xGerritAuth = Cookies.getCookie(XSRF_COOKIE_NAME);
-    Cookies.removeCookie(XSRF_COOKIE_NAME);
     JsonUtil.setDefaultXsrfManager(new XsrfManager() {
       @Override
       public String getToken(JsonDefTarget proxy) {
